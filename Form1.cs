@@ -23,7 +23,7 @@ namespace ERP_PROJESİ
             public int ünvan { get; set; }
         }
         int id;
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=aksu; initial Catalog = ERP; Integrated Security = True");
 
         public Form1()
         {
@@ -81,16 +81,11 @@ namespace ERP_PROJESİ
                 reader = SqlCon.ExecuteReader("Parola", param, commandType: CommandType.StoredProcedure);
                 if (reader.Read())
                 {
-                    if (reader.GetString(0) == username)
-                    {
-                        if (reader.GetString(1) == password)
-                        {
+                  
                             Ana anaa = new Ana();
                             this.Hide();
                             anaa.ShowDialog();
-                        }
-
-                    }
+                   
 
 
                 }else { MessageBox.Show("Şifre hatalı"); }

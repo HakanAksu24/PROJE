@@ -619,11 +619,111 @@ namespace ERP_PROJESİ
                     ürüntürüRD3.Size = new Size(200, 25);
                     Controls.Add(ürüntürüRD3);
 
+
                     break;
                 #endregion
-                default:
+                case "satınalmasiparişleri":
+                    #region Satın Alma Siparişleri
+                    giriskelimesi = "Satın Alma Siparişleri";
+                    Label Stnalmalbl = new Label();
+                    Stnalmalbl.Text = "Cari Adı";
+                    Stnalmalbl.Location = new Point(50, 50);
+                    Stnalmalbl.Size = new Size(150, 25);
+                    Controls.Add(Stnalmalbl);
+                    TextBox stnalmatxt = new TextBox();
+                    stnalmatxt.Location = new Point(250, 50);
+                    stnalmatxt.Size = new Size(200, 25);
+                    Controls.Add(stnalmatxt);
+                    Label urunadı = new Label();
+                    urunadı.Text = "Ürün Adı";
+                    urunadı.Location = new Point(50, 100);
+                    urunadı.Size = new Size(150, 25);
+                    Controls.Add(urunadı);
+                    ComboBox urunadtxt = new ComboBox();
+                    urunadtxt.Location = new Point(250, 100);
+                    urunadtxt.Size = new Size(200, 25);
+                    Controls.Add(urunadtxt);
+                    Label birimfiyatlbl = new Label();
+                    birimfiyatlbl.Text = "Birim Fiyat";
+                    birimfiyatlbl.Location = new Point(50, 150);
+                    birimfiyatlbl.Size = new Size(150, 25);
+                    Controls.Add(birimfiyatlbl);
+                    TextBox birimfiyattxt = new TextBox();
+                    birimfiyattxt.Location = new Point(250, 150);
+                    birimfiyattxt.Size = new Size(200, 25);
+                    Controls.Add(birimfiyattxt);
+                    Label miktarlbl = new Label();
+                    miktarlbl.Text = "Miktar";
+                    miktarlbl.Location = new Point(50, 200);
+                    miktarlbl.Size = new Size(150, 25);
+                    Controls.Add(miktarlbl);
+                    TextBox miktarattxt = new TextBox();
+                    miktarattxt.Location = new Point(250, 200);
+                    miktarattxt.Size = new Size(200, 25);
+                    Controls.Add(miktarattxt);
+                    Label indirimoranilbl = new Label();
+                    indirimoranilbl.Text = "İndirim Oranı";
+                    indirimoranilbl.Location = new Point(50, 250);
+                    indirimoranilbl.Size = new Size(150, 25);
+                    Controls.Add(indirimoranilbl);
+                    TextBox indirimoranitxt = new TextBox();
+                    indirimoranitxt.Location = new Point(250, 250);
+                    indirimoranitxt.Size = new Size(200, 25);
+                    Controls.Add(indirimoranitxt);
+                    DataGridView Satinalmadetaydatagrid = new DataGridView();
+                    Satinalmadetaydatagrid.Location = new Point(600, 50);
+                    Satinalmadetaydatagrid.Size = new Size(300, 400);
+                    Controls.Add(Satinalmadetaydatagrid);
                     break;
+
+                #endregion
+                case "satınalmairsaliyeleri":
+                    giriskelimesi = "Satın Alma İrsaliyesi";
+                    Label cariadilbl=new Label();
+                    cariadilbl.Text = "Cari Adı";
+                    cariadilbl.Location = new Point(50, 50);
+                    cariadilbl.Size = new Size(150, 25);
+                    Controls.Add(cariadilbl);
+                    TextBox cariaditxt = new TextBox();
+                    cariaditxt.Location = new Point(250, 50);
+                    cariaditxt.Size = new Size(200, 25);
+                    Controls.Add(cariaditxt);
+                    Label siparisIDlbl=new Label();
+                    siparisIDlbl.Text = "SiparişID";
+                    siparisIDlbl.Location = new Point(50, 100);
+                    siparisIDlbl.Size = new Size(150, 25);
+                    Controls.Add(siparisIDlbl);
+                    ComboBox siparisIDcombo= new ComboBox();
+                    siparisIDcombo.Location = new Point(250, 100);
+                    siparisIDcombo.Size = new Size(200, 25);
+                    Controls.Add(siparisIDcombo);
+                    Button irsaliyeyeeklebtn = new Button();
+                    irsaliyeyeeklebtn.Location=new Point(665, 265);
+                    irsaliyeyeeklebtn.Size=new Size(20, 20);
+                    Controls.Add (irsaliyeyeeklebtn);
+                    Button İrsaliyedencikarbtn = new Button();
+                    İrsaliyedencikarbtn.Location=new Point(825,265);
+                    İrsaliyedencikarbtn.Size=new Size(20, 20);
+                    Controls.Add(İrsaliyedencikarbtn);
+                    TextBox miktartxt=new TextBox();
+                    miktartxt.Location = new Point(705,265);
+                    miktartxt.Size = new Size(100, 25);
+                    Controls.Add(miktartxt);
+                    DataGridView siparisdatagrid = new DataGridView();
+                    siparisdatagrid.Location = new Point(600, 50);
+                    siparisdatagrid.Size = new Size(300,200);
+                    Controls.Add(siparisdatagrid);
+                    DataGridView irsaliyedatagrid = new DataGridView();
+                    irsaliyedatagrid.Location = new Point(600, 300);
+                    irsaliyedatagrid.Size = new Size(300, 200);
+                    Controls.Add(irsaliyedatagrid);
+
+                    break;
+
+
+
             }
+           
             Label giriş = new Label();
             giriş.Text = " " + (giriskelimesi) + " bilgilerini giriniz";
             giriş.Location = new Point(250, 25);

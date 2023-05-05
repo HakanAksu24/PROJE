@@ -17,7 +17,7 @@ namespace ERP_PROJESİ
     public partial class Ana : Form
     {
 
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=aksu; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
 
         public string arama;
@@ -44,15 +44,15 @@ namespace ERP_PROJESİ
             iconsList.TransparentColor = Color.Blue;
             iconsList.ColorDepth = ColorDepth.Depth32Bit;
             iconsList.ImageSize = new Size(25, 25);
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\home.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\tool.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\dollar.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\cubes.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\checkout.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\delivery-box.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\report.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\employees.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\customer-feedback.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\home.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\tool.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\dollar.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\cubes.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\checkout.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\delivery-box.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\report.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\employees.png"));
+            iconsList.Images.Add(Image.FromFile(@"C:\Users\Aksu\Desktop\PROJE\Icons\customer-feedback.png"));
 
             #region Üst NavBar
             //yukarda eklenme sırasına göre görselleri koyuyor
@@ -117,6 +117,20 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "günlükraporekle";
+        }
+        #endregion
+        #region Satın Alma Siparişleri
+        private void satınalmasiparişleri_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satınalmasiparişleri";
+        }
+        #endregion
+        #region Satın Alma İrsaliyeleri
+        private void satınalmairsaliyeleri_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satınalmairsaliyeleri";
         }
         #endregion
         #region operasyon
@@ -253,7 +267,7 @@ namespace ERP_PROJESİ
         #region çıkış
         private void cikis_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
 
         }
         #endregion
@@ -273,6 +287,7 @@ namespace ERP_PROJESİ
             makinadata.Columns[0].Visible = false;
             arama = null;
         }
+
         #endregion
 
         #endregion
@@ -307,6 +322,35 @@ namespace ERP_PROJESİ
 
         #endregion
 
-        
+        private void anaSayfaPaneli_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+     
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void satınalmasiparişleri_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void satısSiparisleri_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satısSiparisleri";
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+    
     }
 }

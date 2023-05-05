@@ -76,7 +76,7 @@
     <Compile Include="Ana.Designer.cs">
       <DependentUpon>Ana.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Class1.cs" />
+    <Compile Include="Classes\imalat\Class1.cs" />
     <Compile Include="EklemeEkranı.cs">
       <SubType>Form</SubType>
     </Compile>
